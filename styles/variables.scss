@@ -1,0 +1,81 @@
+$background: white;
+$body-text: #4a4a4a;
+$header-text: black;
+$alt-text: #727583;
+$hot-pink: #ff6a7c;
+$peach: #fff0e9;
+$turquoise: #1c808f;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin small {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin small-medium {
+    @media (min-width: 1px) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin wide {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+%flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+@mixin justify-content($justify-content) {
+    -webkit-justify-content: $justify-content;
+    -moz-justify-content: $justify-content;
+    -o-justify-content: $justify-content;
+    -ms-justify-content: $justify-content;
+    justify-content: $justify-content;
+}
+
+@mixin align-items($align-items) {
+    -webkit-align-items: $align-items;
+    -moz-align-items: $align-items;
+    -o-align-items: $align-items;
+    -ms-align-items: $align-items;
+    align-items: $align-items;
+}
+
+@mixin flex-direction($flex-direction) {
+    -webkit-flex-direction: $flex-direction;
+    -moz-flex-direction: $flex-direction;
+    -o-flex-direction: $flex-direction;
+    -ms-flex-direction: $flex-direction;
+    flex-direction: $flex-direction;
+}
+
+@mixin flex-flow($flex-flow) {
+    -webkit-flex-flow: $flex-flow;
+    -moz-flex-flow: $flex-flow;
+    -o-flex-flow: $flex-flow;
+    -ms-flex-flow: $flex-flow;
+    flex-flow: $flex-flow;
+}

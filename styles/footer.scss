@@ -1,0 +1,41 @@
+.footer {
+    margin: 4rem auto 1rem;
+
+    .footer-nav .socials {
+        @extend %flex;
+        @include flex-direction(row);
+        @include justify-content(center);
+        @include align-items(center);
+        padding-left: 0;
+
+        .menu-item {
+            position: relative;
+            top: 2px;
+            width: 2.2rem;
+            height: 2.2rem;
+            @extend %flex;
+            @include justify-content(center);
+            @include align-items(center);
+            margin: 1rem;
+            background-color: $peach;
+            border-radius: 20px;
+            @include transition(all 0.2s);
+
+            &:hover {
+                background-color: $hot-pink !important;
+                @include transition(all 0.2s);
+
+                .social-icon {
+                    fill: white;
+                }
+            }
+        }
+    }
+}
+
+.footer-nav .socials .menu-item .social-icon {
+    width: 1rem;
+    height: 1rem;
+    fill: #494a4c;
+    @include transition(all 0.2s);
+}

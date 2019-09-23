@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Use IE Edge if available -->
+    <title>Ignis | Home</title> <!-- Page title -->
+    <meta name="description" content="Ignis - Joe's Photography Portfolio"> <!-- Page description -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Make sure pixel == pixel on retina and zoom works on touch -->
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> Website icons -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css"> <!-- Main CSS -->
+</head>
+
+<body class="home">
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="site-title"><a href="index.html">Ignis</a></h1>
+        <nav class="header-nav">
+            <ul>
+                <li class="menu-item active"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="blog.html">Blog</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                <a class="menu-item menu-item-search" onclick="showSearch()">
+                    <svg class="search-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
+                        <g>
+                            <path d="M495,466.2L377.2,348.4c29.2-35.6,46.8-81.2,46.8-130.9C424,103.5,331.5,11,217.5,11C103.4,11,11,103.5,11,217.5   S103.4,424,217.5,424c49.7,0,95.2-17.5,130.8-46.7L466.1,495c8,8,20.9,8,28.9,0C503,487.1,503,474.1,495,466.2z M217.5,382.9   C126.2,382.9,52,308.7,52,217.5S126.2,52,217.5,52C308.7,52,383,126.3,383,217.5S308.7,382.9,217.5,382.9z" />
+                        </g>
+                    </svg>
+                </a>
+            </ul>
+            <form class="search-with-button" action="">
+                <input type="search" name="search" placeholder="Search..." />
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+        <button class="nav-toggle-open" onclick="toggleNavOn()" type="button">&#9776;</button>
+        <nav class="header-nav--small">
+            <button class="nav-toggle-close" onclick="toggleNavOff()" type="button">&#10799;</button>
+            <ul>
+                <li class="menu-item--small"><a href="#">Home</a></li>
+                <li class="menu-item--small"><a href="blog.html">Blog</a></li>
+                <li class="menu-item--small"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="hero-section">
+        <section class="hero-image"></section>
+        <section class="hero-content">
+            <h1 class="hero-title">My name is Joe<span class="hero-period">.</span><br />
+                I'm a <span class="hero-emphasised">photographer</span></h1>
+            <p class="hero-instructions">Scroll down to begin your adventure</p>
+        </section>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section-1">
+
+        <!-- Portrait -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/portrait.webp">
+                <source type="image/jpg" srcset="assets/portrait.jpg">
+                <img class="gallery-image" src="assets/portrait.jpg" alt="colour portrait" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Portraits</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+
+        <!-- Cup -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/cup.webp">
+                <source type="image/jpg" srcset="assets/cup.jpg">
+                <img class="gallery-image" src="assets/cup.jpg" alt="cup" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Food</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+
+        <!-- Guitar -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/guitar.webp">
+                <source type="image/jpg" srcset="assets/guitar.jpg">
+                <img class="gallery-image" src="assets/guitar.jpg" alt="guitar" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Music</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section-2">
+
+        <!-- Woods -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/woods.webp">
+                <source type="image/jpg" srcset="assets/woods.jpg">
+                <img class="gallery-image" src="assets/woods.jpg" alt="portrait in woods" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Landscapes</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+
+        <!-- Portrait B&W -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/portraitBW.webp">
+                <source type="image/jpg" srcset="assets/portraitBW.jpg">
+                <img class="gallery-image" src="assets/portraitBW.jpg" alt="portrait in black and white" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Portraits</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+
+        <!-- Gorilla -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/gorilla.webp">
+                <source type="image/jpg" srcset="assets/gorilla.jpg">
+                <img class="gallery-image" src="assets/gorilla.jpg" alt="gorilla" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Animals</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+
+        <!-- Graffiti -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/graf.webp">
+                <source type="image/jpg" srcset="assets/graf.jpg">
+                <img class="gallery-image" src="assets/graf.jpg" alt="graffiti" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Graffiti</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+
+        <!-- Tape -->
+        <section class="gallery-item">
+            <picture>
+                <source type="image/webp" srcset="assets/tape.webp">
+                <source type="image/jpg" srcset="assets/tape.jpg">
+                <img class="gallery-image" src="assets/tape.jpg" alt="cassette tape" />
+            </picture>
+            <section class="gallery-item-overlay">
+                <a class="category" href="">Lifestyle</a>
+                <h2 class="gallery-title">Lorem ipsum dolor sit amet</h2>
+            </section>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <section class="socials">
+                <!-- Facebook Social SVG -->
+                <a class="menu-item" href="" rel="external" aria-label="Follow Joe on Facebook" title="Follow Joe on Facebook"><svg aria-hidden="true" class="social-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <path d="M296.296,512H200.36V256h-64v-88.225l64-0.029l-0.104-51.976C200.256,43.794,219.773,0,304.556,0h70.588v88.242h-44.115 c-33.016,0-34.604,12.328-34.604,35.342l-0.131,44.162h79.346l-9.354,88.225L296.36,256L296.296,512z" />
+                        </g>
+                    </svg></a>
+
+                <!-- Twitter Social SVG -->
+                <a class="menu-item" href="" rel="external" aria-label="Follow Joe on Twitter" title="Follow Joe on Twitter"><svg aria-hidden="true" class="social-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                        <g>
+                            <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411 c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513 c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101 c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104 c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194 c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485 c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" />
+                        </g>
+                    </svg></a>
+
+                <!-- Dribbble Social SVG -->
+                <a class="menu-item" href="" rel="external" aria-label="Follow Joe on Dribbble" title="Follow Joe on Dribbble"><svg aria-hidden="true" class="social-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 438.533 438.533" style="enable-background:new 0 0 438.533 438.533;" xml:space="preserve">
+                        <g>
+                            <path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0 c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267 c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407 s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062 C438.533,179.485,428.732,142.795,409.133,109.203z M219.27,31.977c47.201,0,88.41,15.607,123.621,46.82l-3.569,4.993 c-1.427,2.002-4.996,5.852-10.704,11.565c-5.709,5.708-11.943,11.136-18.699,16.274c-6.762,5.14-15.94,10.992-27.555,17.559 c-11.611,6.567-23.982,12.328-37.117,17.276c-21.887-40.355-45.296-76.709-70.231-109.064 C190.055,33.784,204.805,31.977,219.27,31.977z M72.524,103.06c18.271-23.026,40.537-40.73,66.806-53.1 c23.601,31.405,46.82,67.381,69.662,107.921c-57.862,15.227-115.532,22.841-173.014,22.838 C42.072,151.98,54.253,126.091,72.524,103.06z M44.54,286.794c-8.376-21.412-12.563-43.923-12.563-67.527 c0-2.666,0.098-4.665,0.286-5.996c68.905,0,132.955-8.848,192.149-26.553c6.092,11.8,11.136,22.364,15.133,31.693 c-0.771,0.38-1.999,0.806-3.713,1.283c-1.719,0.476-2.953,0.806-3.721,0.999l-10.561,3.711 c-7.236,2.666-16.708,7.235-28.409,13.703c-11.704,6.478-24.123,14.182-37.257,23.13c-13.134,8.949-26.696,20.797-40.684,35.553 c-13.99,14.75-25.743,30.591-35.26,47.53C64.713,327.381,52.914,308.2,44.54,286.794z M219.27,406.56 c-44.54,0-84.32-14.277-119.343-42.825l4.283,3.142c6.661-14.66,16.462-28.746,29.408-42.257 c12.944-13.511,25.41-24.413,37.401-32.695c11.991-8.274,25.028-16.077,39.115-23.414c14.084-7.323,23.691-11.991,28.835-13.983 c5.14-1.998,9.233-3.572,12.278-4.716l0.568-0.287h0.575c18.647,48.916,31.977,96.313,39.968,142.184 C268.756,401.611,244.397,406.557,219.27,406.56z M376.876,320.479c-14.086,21.796-31.696,39.834-52.817,54.104 c-7.81-43.776-19.985-88.415-36.549-133.902c37.877-5.907,76.8-3.142,116.771,8.274 C400.092,274.841,390.955,298.687,376.876,320.479z M403.706,216.698c-1.903-0.378-4.285-0.81-7.139-1.283 c-2.854-0.473-6.331-1.047-10.424-1.713c-4.087-0.666-8.662-1.283-13.702-1.855c-5.045-0.571-10.421-1.093-16.136-1.569 c-5.708-0.478-11.8-0.855-18.268-1.143c-6.479-0.284-13.042-0.428-19.705-0.428c-6.656,0-13.657,0.193-20.981,0.571 c-7.326,0.375-14.414,1.049-21.265,1.999c-0.575-0.953-1.287-2.524-2.143-4.714c-0.855-2.187-1.479-3.855-1.848-4.997 c-3.621-7.994-7.81-17.036-12.573-27.121c13.134-5.333,25.652-11.469,37.555-18.418c11.892-6.949,21.402-13.131,28.544-18.555 c7.139-5.43,13.895-11.188,20.27-17.277c6.379-6.09,10.513-10.323,12.423-12.703c1.906-2.384,3.713-4.714,5.424-6.995l0.287-0.288 c27.788,33.88,41.974,72.897,42.538,117.059L403.706,216.698z" />
+                        </g>
+                    </svg></a>
+
+                <!-- LinkedIn Social SVG -->
+                <a class="menu-item" href="" rel="external" aria-label="Follow Joe on LinkedIn" title="Follow Joe on LinkedIn"><svg aria-hidden="true" class="social-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;" xml:space="preserve">
+                        <g>
+                            <path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707 c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21 v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824 C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463 c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z M5.477,420.56h92.184v-277.32H5.477V420.56z" />
+                        </g>
+                    </svg></a>
+
+                <!-- YouTube Social SVG -->
+                <a class="menu-item" href="" rel="external" aria-label="Follow Joe on YouTube" title="Follow Joe on YouTube"><svg aria-hidden="true" class="social-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+                        <g>
+                            <path d="M70.939,65.832H66l0.023-2.869c0-1.275,1.047-2.318,2.326-2.318h0.315c1.282,0,2.332,1.043,2.332,2.318 L70.939,65.832z M52.413,59.684c-1.253,0-2.278,0.842-2.278,1.873V75.51c0,1.029,1.025,1.869,2.278,1.869 c1.258,0,2.284-0.84,2.284-1.869V61.557C54.697,60.525,53.671,59.684,52.413,59.684z M82.5,51.879v26.544 C82.5,84.79,76.979,90,70.23,90H19.771C13.02,90,7.5,84.79,7.5,78.423V51.879c0-6.367,5.52-11.578,12.271-11.578H70.23 C76.979,40.301,82.5,45.512,82.5,51.879z M23.137,81.305l-0.004-27.961l6.255,0.002v-4.143l-16.674-0.025v4.073l5.205,0.015v28.039 H23.137z M41.887,57.509h-5.215v14.931c0,2.16,0.131,3.24-0.008,3.621c-0.424,1.158-2.33,2.388-3.073,0.125 c-0.126-0.396-0.015-1.591-0.017-3.643l-0.021-15.034h-5.186l0.016,14.798c0.004,2.268-0.051,3.959,0.018,4.729 c0.127,1.357,0.082,2.939,1.341,3.843c2.346,1.69,6.843-0.252,7.968-2.668l-0.01,3.083l4.188,0.005L41.887,57.509L41.887,57.509z M58.57,74.607L58.559,62.18c-0.004-4.736-3.547-7.572-8.356-3.74l0.021-9.239l-5.209,0.008l-0.025,31.89l4.284-0.062l0.39-1.986 C55.137,84.072,58.578,80.631,58.57,74.607z M74.891,72.96l-3.91,0.021c-0.002,0.155-0.008,0.334-0.01,0.529v2.182 c0,1.168-0.965,2.119-2.137,2.119h-0.766c-1.174,0-2.139-0.951-2.139-2.119V75.45v-2.4v-3.097h8.954v-3.37 c0-2.463-0.063-4.925-0.267-6.333c-0.641-4.454-6.893-5.161-10.051-2.881c-0.991,0.712-1.748,1.665-2.188,2.945 c-0.444,1.281-0.665,3.031-0.665,5.254v7.41C61.714,85.296,76.676,83.555,74.891,72.96z M54.833,32.732 c0.269,0.654,0.687,1.184,1.254,1.584c0.56,0.394,1.276,0.592,2.134,0.592c0.752,0,1.418-0.203,1.998-0.622 c0.578-0.417,1.065-1.04,1.463-1.871l-0.099,2.046h5.813V9.74H62.82v19.24c0,1.042-0.858,1.895-1.907,1.895 c-1.043,0-1.904-0.853-1.904-1.895V9.74h-4.776v16.674c0,2.124,0.039,3.54,0.102,4.258C54.4,31.385,54.564,32.069,54.833,32.732z M37.217,18.77c0-2.373,0.198-4.226,0.591-5.562c0.396-1.331,1.107-2.401,2.137-3.208c1.027-0.811,2.342-1.217,3.941-1.217 c1.345,0,2.497,0.264,3.459,0.781c0.967,0.52,1.713,1.195,2.23,2.028c0.527,0.836,0.885,1.695,1.076,2.574 c0.195,0.891,0.291,2.235,0.291,4.048v6.252c0,2.293-0.092,3.98-0.271,5.051c-0.177,1.074-0.557,2.07-1.146,3.004 c-0.58,0.924-1.329,1.615-2.237,2.056c-0.918,0.445-1.968,0.663-3.154,0.663c-1.325,0-2.441-0.183-3.361-0.565 c-0.923-0.38-1.636-0.953-2.144-1.714c-0.513-0.762-0.874-1.69-1.092-2.772c-0.219-1.081-0.323-2.707-0.323-4.874L37.217,18.77 L37.217,18.77z M41.77,28.59c0,1.4,1.042,2.543,2.311,2.543c1.27,0,2.308-1.143,2.308-2.543V15.43c0-1.398-1.038-2.541-2.308-2.541 c-1.269,0-2.311,1.143-2.311,2.541V28.59z M25.682,35.235h5.484l0.006-18.96l6.48-16.242h-5.998l-3.445,12.064L24.715,0h-5.936 l6.894,16.284L25.682,35.235z" />
+                        </g>
+                    </svg></a>
+            </section>
+        </nav>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/modernizr-custom.js">
+
+    </script>
+</body>
+
+</html>

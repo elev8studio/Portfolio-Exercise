@@ -1,0 +1,98 @@
+.banner-section {
+    position: relative;
+    padding: 3.5rem 2rem;
+    background-color: $peach;
+    @include small {
+        padding: 2rem;
+    }
+
+    .banner-title {
+        font-size: 2.5rem;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-weight: bold;
+        color: $header-text;
+        text-align: center;
+        @include small {
+            font-size: 1.5rem;
+        }
+        @include medium {
+            font-size: 2rem;
+        }
+    }
+}
+
+.no-webp .hero-image {
+    background: url("../assets/hero.jpeg") center center / cover no-repeat $peach;
+}
+
+.webp .hero-image {
+    background: url("../assets/hero.webp") center center / cover no-repeat $peach;
+}
+
+.hero-section {
+    background-color: black;
+
+    .hero-image {
+        filter: contrast(0.4) opacity(0.7);
+    }
+
+    .hero-content {
+        z-index: 1;
+        @extend %flex;
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        padding: 12rem 2rem;
+        @include small {
+            padding: 18% 2rem;
+        }
+        @include medium {
+            padding: 18% 2rem;
+        }
+
+        .hero-title {
+            margin: 0;
+            font-size: 4.2rem;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: bold;
+            color: white;
+            filter: contrast(1) brightness(1);
+            letter-spacing: 0.08rem;
+            @include small {
+                font-size: 1.5rem;
+            }
+            @include medium {
+                font-size: 2rem;
+            }
+        }
+
+        .hero-instructions {
+            margin-top: 1rem;
+            font-family: $nunito;
+            font-size: 1rem;
+            color: #6c7175;
+            @include small {
+                font-size: 1.15rem;
+                max-width: 45%;
+            }
+        }
+
+        .hero-emphasised {
+            font-family: serif;
+            font-style: italic;
+            font-size: 4.6rem;
+            color: #37cade;
+            letter-spacing: 0;
+            @include small {
+                font-size: 1.6rem;
+            }
+            @include medium {
+                font-size: 2.1rem;
+            }
+        }
+
+        .hero-period {
+            color: #fe6c7f;
+        }
+    }
+}

@@ -1,0 +1,186 @@
+.blog {
+	&-section-1,
+	&-section-2 {
+		@extend %flex;
+		@include justify-content(flex-start);
+		@include flex-flow(column wrap);
+		@include align-items(center);
+		@include small {
+			.blog-section-2,
+			.blog-sidebar {
+				padding: 3rem 0.5rem 0 3rem;
+			}
+
+			.blog-sidebar {
+				margin-top: 2rem;
+			}
+		}
+	}
+
+	&-post,
+	&-section-1 {
+		box-sizing: border-box;
+		margin: 3rem 0.5rem 0 3rem;
+		padding: 0.25rem;
+		@include small {
+			margin: 3rem 2rem 0;
+		}
+	}
+
+	&-section-2 {
+		box-sizing: border-box;
+		margin: 3rem 3rem 0 2rem;
+		padding: 0.25rem;
+		@include small {
+			margin: 0 2rem;
+		}
+	}
+
+	&-sidebar {
+		box-sizing: border-box;
+		margin: 3rem 3rem 0 2rem;
+		padding: 0.25rem;
+		@include small {
+			margin: 2.5rem 2rem 0;
+		}
+
+		.sidebar-list-title {
+			margin-top: 3rem;
+		}
+
+		.sidebar-search {
+			input[type="search"] {
+				position: relative;
+				height: 35px;
+				padding: 0 10px;
+				border: 2px solid #ccc;
+			}
+
+			input[type="search"],
+			button[type="submit"] {
+				font-size: 0.8rem;
+				@include transition(all 0.2s);
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			button[type="submit"] {
+				height: 35px;
+				padding: 0 10px;
+				background-color: $hot-pink;
+				border: 1px solid darken($hot-pink, 5%);
+				color: white;
+				font-size: 0.8rem;
+				font-style: italic;
+			}
+		}
+
+		.sidebar-list {
+			li {
+				margin-bottom: 0.7rem;
+
+				a {
+					margin-bottom: 0.7rem;
+					color: $body-text;
+					font-size: 0.9rem;
+					text-decoration: none;
+				}
+			}
+
+			&--no-bullets {
+				padding-left: 0;
+				list-style: none;
+
+				li {
+					margin-bottom: 0.7rem;
+
+					a {
+						margin-bottom: 0.7rem;
+						color: $body-text;
+						font-size: 0.9rem;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	&-card {
+		@include small {
+			margin-bottom: 1rem;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.blog-content {
+			padding: 1.5rem 2rem;
+			text-align: center;
+
+			.category {
+				padding: 5px 10px;
+				background-color: $turquoise;
+				color: white;
+				font-size: 0.8rem;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			.title {
+				margin: 1.5rem 0 0.7rem;
+				font-size: 1.2rem;
+				font-family: $poppins;
+			}
+
+			.metadata {
+				margin-top: 0;
+				color: $alt-text;
+				font-size: 0.9rem;
+				font-weight: bold;
+			}
+
+			.excerpt {
+				font-size: 1rem;
+				line-height: 1.5rem;
+
+				&::after {
+					content: '[...]';
+				}
+			}
+
+			.read-more a {
+				color: $alt-text;
+				font-size: 0.9rem;
+				font-weight: bold;
+			}
+		}
+	}
+
+	&-post {
+		p {
+			color: $body-text;
+			font-size: 0.9rem;
+			font-weight: lighter;
+			line-height: 1.6rem;
+		}
+
+		.metadata {
+			margin: 2rem 0 1rem;
+			color: $alt-text;
+			font-size: 0.7rem;
+		}
+
+		.category {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 5px;
+			background-color: $turquoise;
+			color: white;
+			font-size: 0.65rem;
+			text-decoration: none;
+		}
+	}
+}

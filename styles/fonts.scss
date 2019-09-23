@@ -1,0 +1,47 @@
+// Nunito-Light
+@font-face {
+    font-family: 'Nunito';
+    src: url("../assets/fonts/Nunito/Nunito-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-display: swap;
+}
+// Nunito-Italic
+@font-face {
+    font-family: 'Nunito';
+    src: url("../assets/fonts/Nunito/Nunito-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+
+}
+// Nunito-SemiBold
+@font-face {
+    font-family: 'Nunito';
+    src: url("../assets/fonts/Nunito/Nunito-SemiBold.ttf") format("truetype");
+    font-weight: bold;
+    font-display: swap;
+}
+// Poppins-Light
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+}
+// Poppins-Regular
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-display: swap;
+}
+// Poppins-SemiBold
+@font-face {
+    font-family: 'Poppins';
+    src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: bold;
+    font-display: swap;
+}
+
+$poppins: 'Poppins', Arial, sans-serif;
+$nunito: 'Nunito', Arial, sans-serif;

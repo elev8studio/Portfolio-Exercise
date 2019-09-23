@@ -1,0 +1,228 @@
+.page-header {
+	@extend %flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	@include small {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem 2rem 0.7rem;
+	}
+	@include medium {
+		padding: 1.5rem 2rem;
+	}
+
+	.site-title {
+		margin: 0;
+		font-family: $poppins;
+		font-size: 1.5rem;
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+	}
+
+	.header-nav {
+		position: relative;
+		@include small-medium {
+			display: none;
+
+			.nav-toggle-on {
+				z-index: 3;
+				font-size: 2rem;
+			}
+		}
+
+		ul {
+			@extend %flex;
+			@include flex-direction(row);
+			@include justify-content(center);
+			@include align-items(center);
+
+			.menu-item {
+				display: inline-block;
+				margin: 0.5rem;
+				padding: 0.5rem;
+				font-family: 'Poppins', Arial, sans-serif;
+				font-size: 0.8rem;
+				font-weight: normal;
+				text-transform: uppercase;
+
+				a {
+					color: $body-text;
+					text-decoration: none;
+
+					&:hover {
+						color: $hot-pink;
+						@include transition(all 0.2s);
+					}
+				}
+			}
+
+			.menu-item.menu-item-search {
+				@extend %flex;
+				@include flex-direction(row);
+				@include justify-content(center);
+				@include align-items(center);
+				width: 1.8rem;
+				height: 1.8rem;
+				margin: 0 0 0 0.8rem;
+				padding: 0;
+				background-color: $peach;
+				border-radius: 20px;
+				@include transition(all 0.2s);
+
+				&:hover {
+					background-color: $hot-pink !important;
+					cursor: pointer;
+					@include transition(all 0.3s);
+
+					.search-icon {
+						fill: white;
+					}
+				}
+			}
+
+			.active a {
+				color: $hot-pink;
+			}
+		}
+
+		.search-with-button {
+			position: absolute;
+			bottom: -35px;
+			right: 0;
+			display: none;
+
+			input[type="search"] {
+				position: relative;
+				left: 4px;
+				height: 35px;
+				padding: 0 10px;
+				border: 2px solid #ccc;
+			}
+
+			input[type="search"],
+			button[type="submit"] {
+				font-size: 0.8rem;
+				@include transition(all 0.2s);
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			button[type="submit"] {
+				height: 35px;
+				padding: 0 10px;
+				background-color: $hot-pink;
+				border: 2px solid darken($hot-pink, 5%);
+				color: white;
+				font-size: 0.8rem;
+				font-style: italic;
+			}
+		}
+	}
+	@include wide {
+		.header-nav--small,
+		.nav-toggle-close,
+		.nav-toggle-open {
+			display: none;
+		}
+	}
+	@include small-medium {
+		.header-nav--small {
+			display: none;
+		}
+
+		.header-nav--small.visible {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 4;
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+			overflow: auto;
+			background-color: #202529;
+			padding: 0.8rem 2rem;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding-left: 0;
+				margin: 3rem 2rem 1rem;
+
+				.menu-item--small {
+					display: inline-block;
+					text-transform: uppercase;
+					font-family: $poppins;
+					margin: 1rem;
+
+					a {
+						color: white;
+						text-decoration: none;
+						font-family: $poppins;
+						letter-spacing: 0.06rem;
+					}
+				}
+			}
+
+			.nav-toggle-close {
+				z-index: 5;
+				float: right;
+				-webkit-appearance: none;
+				background: transparent;
+				border: none;
+				color: white;
+				font-size: 2rem;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		.nav-toggle-open {
+			-webkit-appearance: none;
+			background: transparent;
+			border: none;
+			font-size: 1.5rem;
+			@include small {
+				font-size: 1.8rem;
+				margin-top: 1rem;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.nav-toggle-open.hidden {
+			display: none;
+			@include small-medium {
+				display: inline-block;
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+.page-header .header-nav .search-with-button.expand {
+	display: inline-block;
+	z-index: 2;
+}
+
+.search-icon {
+	width: 0.7rem;
+	height: 0.7rem;
+	@include transition(all 0.2s);
+
+	&:hover {
+		@include transition(all 0.2s);
+	}
+}
